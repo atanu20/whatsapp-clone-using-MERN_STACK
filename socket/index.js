@@ -2,8 +2,8 @@ const PORT = process.env.PORT || 9000
 const Nexmo = require('nexmo');
 
 const vonage = new Nexmo({
-  apiKey: "16009c5b",
-  apiSecret: "8fuJHdbGpf5PGgEx"
+  apiKey: "**",
+  apiSecret: "**"
 })
 
 const io = require("socket.io")(PORT, {
@@ -54,7 +54,7 @@ io.on("connection", (socket) => {
         if (receiverphone) {
           // console.log(receiverphone)
           const from = "Small Talk"
-          const to = "919775234520"
+          const to = "***"
           const text = "you got a new message from "+ sendername +" | Small Talk"
           vonage.message.sendSms(from, to, text, (err, responseData) => {
             if (err) {
