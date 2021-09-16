@@ -1,0 +1,562 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.error{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: ghostwhite;
+  height: 100vh;
+}
+.error h1{
+  font-size: 60px ;
+  font-weight: 700;
+  text-shadow:0px 0px 5px rgb(226, 131, 147);
+}
+
+.home{
+  width: 100%;
+  min-height: 100vh;
+  background-color:  #be9cff ;
+  
+}
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(199, 194, 194);
+}
+
+
+
+
+
+.card{
+  border: none;
+  border-radius: 0;
+  
+  /* background-color: #0d4b9c; */
+  /* background-color: #273c75; */
+  color: white;
+  height: 95vh;
+
+}
+.chatbox{
+  display: flex;
+  flex: 1;
+  
+}
+
+.left-bar{
+  flex-basis: 30%;
+    min-width: 270px;
+  /* padding: 10px; */
+  background-color: #1d2f3d;
+}
+.center-bar{
+  
+  flex-basis: 40%;
+    min-width: 350px;
+  background-color: #536f85;
+}
+.right-bar{
+  /* padding: 10px; */
+  flex-basis: 30%;
+    min-width: 300px;
+    background-color: #1d2f3d;
+}
+
+
+
+/* left section css  */
+
+.left-top{
+  width: 100%;
+ justify-content: space-between;
+ display: flex;
+ align-items: center;
+  padding: 5px;
+  height: 50px;
+  background-color: #273c75;
+  
+}
+.imgleft{
+  display: flex;
+}
+.leftbox{
+  border-right:1px solid rgb(243, 240, 240);
+}
+.proimg{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.home .form-control{
+  border: 1px soild rgb(230, 227, 227);
+  border-radius:30px;
+  background-color: transparent;
+  color: #fff !important;
+}
+.home .form-control:focus{
+  box-shadow: none;
+  background-color: transparent;
+}
+.alluser{
+  width: 100%;
+  height: 350px;
+  overflow-y: scroll;
+}
+
+.user{
+  display: flex;
+  cursor: pointer;
+ width: 100%;
+ height: 50px;
+ align-items: center;
+ border-bottom: 1px solid #273c75;
+  
+
+}
+.user:hover{
+  background-color:rgba(196, 196, 196,0.5);
+}
+.startc{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.startc h1{
+  padding: 2px 15px;
+  font-size: 55px;
+  font-weight: bolder;
+  color: rgba(145, 151, 158, 0.7);
+}
+.startc h4{
+  padding: 2px 15px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgba(145, 151, 158, 0.7);
+}
+.online-user{
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+}
+.all-user{
+  width: 100%;
+  height: 250px;
+  overflow-y: scroll;
+}
+.online-users{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgb(35, 75, 85);
+  display: flex;
+  margin-bottom: 5px;
+  
+}
+.online-use{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgb(35, 75, 85);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 0px 5px;
+}
+.userdet{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.btn-info{
+  border-radius: 0;
+  
+}
+.useimg{
+  position: relative;
+  
+}
+.usimg{
+  display: flex;
+  
+}
+.online{
+  position: absolute;
+  left: 45px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(23, 230, 23);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* center section  */
+.center-top{
+  width: 100%;
+ justify-content: space-between;
+ display: flex;
+ align-items: center;
+  padding: 5px;
+  height: 50px;
+  background-color: #273c75;
+}
+.centerin{
+  display: flex;
+flex-direction: column;
+}
+.center-chat{
+  width: 100%;
+  height: 76vh;
+  overflow-y: scroll;
+  /* background-color: teal; */
+  padding: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-center{
+  width: 100%;
+  display: flex;
+  
+  
+}
+.fa-ellipsis-v{
+  cursor: pointer;
+}
+.inputbox{
+  flex: 7;
+  padding: 5px;
+}
+.btn-success, .btn-dark{
+  border-radius: 0;
+}
+
+/* MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded */
+.MuiPopover-paper {
+ 
+  top: 55px !important;
+  left: 328px !important;
+  
+}
+.srhr{
+  width: 100%;
+  height: 1px;
+  background-color: rgba(196, 196, 196,0.5);
+}
+
+
+.messageText{
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #2e2c2c;
+  color: white;
+  max-width: 300px;
+}
+
+.messageBottom{
+  font-size: 12px;
+  
+  margin-bottom: 10px;
+  
+}
+
+.message.own{
+  align-items: flex-end;
+}
+
+.message.own .messageText{
+  background-color: rgb(12, 65, 75);
+  color: #fff;
+}
+.message {
+  padding: 0 5px;
+  display: flex;
+flex-direction: column;
+  margin: 10px 0;
+
+}
+
+.uhr{
+  width: 100%;
+  height: 0.5px;
+  background-color: sienna;
+}
+
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+.textb{
+  width: 150px;
+  height: 50px;
+background-color:blueviolet;
+padding: 10px;
+color:#fff;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+.postim{
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.msim{
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+  cursor: pointer;
+  
+}
+.lodbox{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgmodel{
+  width: 100%;
+  height: 95vh;
+  background-color: rgb(2, 41, 49);
+  position: absolute;
+  top:0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modelbox{
+  width:450px ;
+  height: 450px;
+  background-color: #fff;
+}
+.modeltop{
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+.topt{
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  cursor: pointer;
+}
+.modelimg{
+  width: 90%;
+  height: 370px;
+  border-radius: 15px;
+  display: block;
+  margin: auto;
+  
+  
+}
+.onmodel{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(4, 31, 66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.onbox{
+  width:450px ;
+  height: 200px;
+  background-color: rgb(3, 30, 37);
+  color: rgb(245, 240, 240);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.btnn{
+  cursor: no-drop;
+}
+
+
+.group-items{
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+}
+.group-item{
+  display: flex;
+  cursor: pointer;
+ width: 100%;
+ height: 50px;
+ align-items: center;
+ border-bottom: 1px solid #273c75;
+
+}
+.group-item:hover{
+  background-color: rgba(196, 196, 196,0.5);
+}
+
+.profile{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(3, 27, 65);
+  padding: 70px 0 50px 0;
+}
+.login-container{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(3, 27, 65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-box{
+  width: 400px;
+  height: auto;
+  background-color: #fff;
+  
+}
+.proimm{
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.probox{
+  width: 80%;
+  margin: auto;
+  display: block;
+  height: 550px;
+  background-color: slategray;
+  
+}
+.proitems{
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+}
+.usdet{
+  display: flex;
+}
+
+.proitem{
+  display: flex;
+  width: 100%;
+  padding: 2px 10px;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  /* cursor: pointer; */
+}
+.proitem:hover{
+  background-color: rgb(26, 54, 82);
+}
+
+.formbox{
+  width: 80%;
+  height: 200px;
+  background-color: #fff;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.premium{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(3, 27, 65);
+  
+}
+.premium .container{
+  padding-top: 150px;
+  padding-bottom: 20px;
+}
+
+.premium .card{
+  height: auto;
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
+}
+
+.immbox{
+  position: relative;
+}
+
+.startbox{
+  color: rgb(79, 241, 74);
+  position: absolute;
+  top:0;
+  left: -5px;
+}
+.downbtn{
+  border: none !important;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+.downbtnone{
+  border: none !important;
+  background-color: transparent;
+  color: white;
+  cursor: no-drop;
+}

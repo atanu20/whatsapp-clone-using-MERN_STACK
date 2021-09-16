@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .invoice-box {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+            font-size: 20px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica';
+            color: #555;
+        }
+
+        .margin-top {
+            margin-top: 50px;
+        }
+
+        .justify-center {
+            text-align: center;
+        }
+
+        .invoice-box table {
+            width: 100%;
+            line-height: inherit;
+            text-align: left;
+            
+        }
+        .invoice-box .tablebox{
+            border: 1px solid black;
+            padding: 7px;
+        }
+
+        .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+        }
+
+        .invoice-box table tr.top table td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.top table td.title {
+            font-size: 45px;
+            line-height: 45px;
+            color: #333;
+        }
+
+        .invoice-box table tr.information table td {
+            padding-bottom: 40px;
+        }
+
+        .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        .invoice-box table tr.details td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.item td {
+            border-bottom: 1px solid #eee;
+        }
+
+        .invoice-box table tr.item.last td {
+            border-bottom: none;
+        }
+
+        .invoice-box table tr.total td:nth-child(2) {
+            border-top: 2px solid #eee;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .invoice-box table tr.top table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            .invoice-box table tr.information table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+        <h1 style="text-align: center;padding: 5px;">Conversation With <span style="color: blueviolet;"><%= message.recivername %></span></h1>
+        <table cellpadding="0" cellspacing="0" class="tablebox">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src=<%= message.reciverimg %>
+                                    style="width:100%; max-width:120px;border-radius:15px">
+                                    
+                                    <p style="margin-top: -10px;font-size: 20px;"><%= message.recivername %> </p>
+
+                            </td>
+                            <td>
+                                <h4>Date: <%= new Date().toDateString() %>
+                                </h4>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr class="heading">
+                <td><%= message.recivername %></td>
+                <td>Me</td>
+            </tr>
+            <% if (message.messages.length> 0) { %>
+                <% message.messages.forEach(msg=> {%>
+                    <% if(msg.text){ %>
+
+                        <% if(msg.senderId===message.sendId) { %>
+                            <tr class="item">
+                                <td></td>
+                                <td>
+                                    <p>
+                                        <%= msg.text %>
+                                    </p>
+                                    <small>
+                                        <%= new Date(msg.date).toDateString() %>
+                                    </small>
+                                </td>
+                            </tr>
+
+                            <% } else { %>
+
+                                <tr class="item">
+
+                                    <td>
+                                        <p>
+                                            <%= msg.text %>
+                                        </p>
+                                        <small>
+                                            <%= new Date(msg.date).toDateString() %>
+                                        </small>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <% } %>
+
+
+                                    <% } %>
+                <% if(msg.imgtext){ %>
+                    <% if(msg.senderId===message.sendId) { %>
+                        <tr class="item">
+                            <td></td>
+                            <td>
+                                <img src=<%= msg.imgtext %>
+                                    style="width:100%; max-width:230px;border-radius:15px">
+                                    <br>
+                                    <small>
+                                        <%= new Date(msg.date).toDateString() %>
+                                    </small>
+                            </td>
+                        </tr>
+
+                        <% } else { %>
+                            <tr class="item">
+
+                                <td>
+                                    <img src=<%= msg.imgtext %>
+                                    style="width:100%; max-width:230px;border-radius:15px">
+                                    <br>
+                                    <small>
+                                        <%= new Date(msg.date).toDateString() %>
+                                    </small>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <% } %>
+
+
+                <% } %>               
+
+
+
+
+
+
+                                                <% });%>
+                                                    <% }%>
+
+
+
+
+
+
+        </table>
+        <br />
+      <center>
+          <br><br>
+        <a href="https://small-talk-aj.netlify.app" target="_blank" style="color: brown;" >SMALL TALK</a>
+
+        <p>@Copyright 2010 - <%=new Date().getFullYear() %></p>
+      </center>
+
+    </div>
+</body>
+
+</html>
